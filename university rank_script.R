@@ -8,13 +8,13 @@ d<-read_excel("~/University/data/university rank.xlsx")
 #	https://github.com/rstudio/DT
 
 datatable(d, width="auto",rownames = FALSE,
-          colnames=c("№"= 1,
-                     "ВНЗ"= 2,
-                     "Місто"= 3,
-                     "Оцінка якості науково-педагогічного потенціалу Iнп"= 4,
-                     "Оцінка якості навчання IН"= 5,
-                     "Оцінка міжнародного визнання IМВ"= 6,
-                     "Оцінка інтегрального показника діяльності ВНЗ, IЗ"= 7),
+          colnames=c("в„–"= 1,
+                     "Р’РќР—"= 2,
+                     "РњС–СЃС‚Рѕ"= 3,
+                     "РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°СѓРєРѕРІРѕ-РїРµРґР°РіРѕРіС–С‡РЅРѕРіРѕ РїРѕС‚РµРЅС†С–Р°Р»Сѓ IРЅРї"= 4,
+                     "РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°РІС‡Р°РЅРЅСЏ IРќ"= 5,
+                     "РћС†С–РЅРєР° РјС–Р¶РЅР°СЂРѕРґРЅРѕРіРѕ РІРёР·РЅР°РЅРЅСЏ IРњР’"= 6,
+                     "РћС†С–РЅРєР° С–РЅС‚РµРіСЂР°Р»СЊРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° РґС–СЏР»СЊРЅРѕСЃС‚С– Р’РќР—, IР—"= 7),
           
           extensions = c('Buttons','FixedHeader'),               
           options=list(pageLength =20,
@@ -29,40 +29,40 @@ datatable(d, width="auto",rownames = FALSE,
           caption = htmltools::tags$caption(
             style = 'caption-side: bottom; text-align: right;color:grey; ',
             htmltools::withTags(
-              div(HTML('Джерело даних: <a href="http://www.euroosvita.net"
+              div(HTML('Р”Р¶РµСЂРµР»Рѕ РґР°РЅРёС…: <a href="http://www.euroosvita.net"
                        style="color:grey; text-decoration: none" title="www.euroosvita.net"
                        target="_blank"> www.euroosvita.net<a>')))))%>%
-  formatStyle("№", 
+  formatStyle("в„–", 
               fontSize = '16px')%>%
-  formatStyle("ВНЗ",
+  formatStyle("Р’РќР—",
               fontSize = '12px')%>%
-  formatStyle("Місто",
+  formatStyle("РњС–СЃС‚Рѕ",
               fontWeght="bold",
               fontSize = '12px')%>%
-  formatStyle("Оцінка якості науково-педагогічного потенціалу Iнп",
+  formatStyle("РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°СѓРєРѕРІРѕ-РїРµРґР°РіРѕРіС–С‡РЅРѕРіРѕ РїРѕС‚РµРЅС†С–Р°Р»Сѓ IРЅРї",
               fontSize = '16px',
               fontWeght="bold",
-              background = styleColorBar(d$`Оцінка якості науково-педагогічного потенціалу Iнп`, "#97b5cf"),
+              background = styleColorBar(d$`РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°СѓРєРѕРІРѕ-РїРµРґР°РіРѕРіС–С‡РЅРѕРіРѕ РїРѕС‚РµРЅС†С–Р°Р»Сѓ IРЅРї`, "#97b5cf"),
               backgroundSize = '95% 20px',
               backgroundRepeat = 'no-repeat',
               backgroundPosition = 'center')%>%
-  formatStyle("Оцінка якості навчання IН",
+  formatStyle("РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°РІС‡Р°РЅРЅСЏ IРќ",
               fontSize = '16px',
-              background = styleColorBar(d$`Оцінка якості навчання IН`, "#c3bba8"),
+              background = styleColorBar(d$`РћС†С–РЅРєР° СЏРєРѕСЃС‚С– РЅР°РІС‡Р°РЅРЅСЏ IРќ`, "#c3bba8"),
               fontWeght="bold",
               backgroundSize = '95% 20px',
               backgroundRepeat = 'no-repeat',
               backgroundPosition = 'center')%>%
-  formatStyle("Оцінка міжнародного визнання IМВ",
+  formatStyle("РћС†С–РЅРєР° РјС–Р¶РЅР°СЂРѕРґРЅРѕРіРѕ РІРёР·РЅР°РЅРЅСЏ IРњР’",
               fontSize = '16px',
-              background = styleColorBar(d$`Оцінка міжнародного визнання IМВ`, "#c7d4d9"),
+              background = styleColorBar(d$`РћС†С–РЅРєР° РјС–Р¶РЅР°СЂРѕРґРЅРѕРіРѕ РІРёР·РЅР°РЅРЅСЏ IРњР’`, "#c7d4d9"),
               backgroundSize = '95% 20px',
               fontWeght="bold",
               backgroundRepeat = 'no-repeat',
               backgroundPosition = 'center')%>%
-  formatStyle("Оцінка інтегрального показника діяльності ВНЗ, IЗ",
+  formatStyle("РћС†С–РЅРєР° С–РЅС‚РµРіСЂР°Р»СЊРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° РґС–СЏР»СЊРЅРѕСЃС‚С– Р’РќР—, IР—",
               fontSize = '16px',
-              background = styleColorBar(d$`Оцінка інтегрального показника діяльності ВНЗ, IЗ`, "#c7d4b6"),
+              background = styleColorBar(d$`РћС†С–РЅРєР° С–РЅС‚РµРіСЂР°Р»СЊРЅРѕРіРѕ РїРѕРєР°Р·РЅРёРєР° РґС–СЏР»СЊРЅРѕСЃС‚С– Р’РќР—, IР—`, "#c7d4b6"),
               backgroundSize = '95% 20px',
               fontWeght="bold",
               backgroundRepeat = 'no-repeat',
